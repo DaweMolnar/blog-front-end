@@ -10,6 +10,7 @@ import { PostCardComponent } from './post-card/post-card.component';
 import { PostFullComponent } from './post-full/post-full.component';
 import { CommentComponent } from './comment/comment.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NewPostComponent } from './new-post/new-post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

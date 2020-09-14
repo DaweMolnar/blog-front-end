@@ -1,8 +1,5 @@
 <div class="blog-post">
-  <h2 class="blog-post-title">Sample blog post</h2>
-  <p class="blog-post-meta">September 14, 2020 by <a href="#">David</a></p>
-
-  <p> I am forced into speech because men of science have refused to follow my advice without knowing why. It is altogether against my will that I tell my reasons for opposing this contemplated invasion of the antarctic - with its vast fossil hunt and its wholesale boring and melting of the ancient ice caps. And I am the more reluctant because my warning may be in vain.
-
-    Doubt of the real facts, as I must reveal them, is inevitable; yet, if I suppressed what will seem extravagant and incredible, there would be nothing left. The hitherto withheld photographs, both ordinary and aerial, will count in my favor, for they are damnably vivid and graphic. Still, they will be doubted because of the great lengths to which clever fakery can be carried. The ink drawings, of course, will be jeered at as obvious impostures, notwithstanding a strangeness of technique which art experts ought to remark and puzzle over.</p>
-</div><!-- /.blog-post -->
+  <h2 class="blog-post-title">{{post.title}}</h2>
+  <p class="blog-post-meta">{{post.creation_date | date:'longDate'}} by <a href="#">{{post.author}}</a></p>
+  <p> {{post.content}}</p>
+  </div><!-- /.blog-post -->
