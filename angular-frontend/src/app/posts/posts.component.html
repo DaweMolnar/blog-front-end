@@ -1,9 +1,39 @@
-<link rel="stylesheet" href="posts.component.css">
-<div class="blog-post">
-  <h2 class="blog-post-title">Sample blog post</h2>
-  <p class="blog-post-meta">September 14, 2020 by <a href="#">David</a></p>
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <app-post-card></app-post-card>
+      <app-post-card></app-post-card>
+      <app-post-card></app-post-card>
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
 
-  <p> I am forced into speech because men of science have refused to follow my advice without knowing why. It is altogether against my will that I tell my reasons for opposing this contemplated invasion of the antarctic - with its vast fossil hunt and its wholesale boring and melting of the ancient ice caps. And I am the more reluctant because my warning may be in vain.
+    </div><!-- /.blog-main -->
 
-    Doubt of the real facts, as I must reveal them, is inevitable; yet, if I suppressed what will seem extravagant and incredible, there would be nothing left. The hitherto withheld photographs, both ordinary and aerial, will count in my favor, for they are damnably vivid and graphic. Still, they will be doubted because of the great lengths to which clever fakery can be carried. The ink drawings, of course, will be jeered at as obvious impostures, notwithstanding a strangeness of technique which art experts ought to remark and puzzle over.</p>
-</div><!-- /.blog-post -->
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">This is not the coolest blog in the world, this is just a tribute</p>
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">Labels</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">March 2014</a></li>
+          <li><a href="#">February 2014</a></li>
+          <li><a href="#">January 2014</a></li>
+          <li><a href="#">December 2013</a></li>
+          <li><a href="#">November 2013</a></li>
+          <li><a href="#">October 2013</a></li>
+          <li><a href="#">September 2013</a></li>
+          <li><a href="#">August 2013</a></li>
+          <li><a href="#">July 2013</a></li>
+          <li><a href="#">June 2013</a></li>
+          <li><a href="#">May 2013</a></li>
+          <li><a href="#">April 2013</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+  </div>
+</main>

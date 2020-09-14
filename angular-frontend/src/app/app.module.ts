@@ -5,11 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { PostCardComponent } from './post-card/post-card.component';
+import { PostFullComponent } from './post-full/post-full.component';
+import { CommentComponent } from './comment/comment.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    LoginComponent,
+    PostCardComponent,
+    PostFullComponent,
+    CommentComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
