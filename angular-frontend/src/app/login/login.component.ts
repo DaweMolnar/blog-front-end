@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogApiService} from "../blog-api.service";
 import {Token, User} from "../models/api.models";
+import {Store} from "@ngrx/store";
+import {AppState} from "../app.state";
+import * as TokenActions from './../actions/store.actions'
 
 @Component({
   selector: 'app-login',
@@ -11,7 +14,7 @@ export class LoginComponent implements OnInit {
   errors = [];
   hasError = false;
 
-  constructor(private apiService : BlogApiService) { }
+  constructor(private apiService : BlogApiService, private store: Store<AppState>) { }
 
   ngOnInit(): void {
   }
@@ -19,7 +22,11 @@ export class LoginComponent implements OnInit {
   login(loginForm : User) {
     this.errors=[]
     this.apiService.login(loginForm).subscribe(
-      (token: Token) => {this.hasError = false; console.log(token.token)},
+      (token: Token) => {
+        this.hasError = false;
+        console.log(token.token);
+        this.store.dispatch(new TokenActions.AddToken(token));
+      },
       error => {this.hasError = true; this.errors.push(JSON.stringify(error));}
     )
   }

@@ -1,1 +1,1 @@
-<p>new-post works!</p>
+<p *ngIf="(token$ | async)">TOKEN {{(token$ | async).token}} .... </p>

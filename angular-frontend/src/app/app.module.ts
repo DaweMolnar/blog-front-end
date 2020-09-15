@@ -11,7 +11,9 @@ import { PostFullComponent } from './post-full/post-full.component';
 import { CommentComponent } from './comment/comment.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
+import { StoreModule } from '@ngrx/store';
+import { reducer } from "./reducers/store.reducer";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
+    StoreModule.forRoot({token: reducer}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
