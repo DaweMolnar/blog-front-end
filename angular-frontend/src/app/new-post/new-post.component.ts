@@ -4,6 +4,7 @@ import {AppState} from "../app.state";
 import {PostAdd, Token} from "../models/api.models";
 import {Observable} from "rxjs";
 import {BlogApiService} from "../blog-api.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-new-post',
@@ -16,7 +17,7 @@ export class NewPostComponent implements OnInit {
   token$: Observable<Token>;
   post : PostAdd;
 
-  constructor(private apiService : BlogApiService, private store: Store<AppState> ) {
+  constructor(private apiService : BlogApiService, private store: Store<AppState>, private router: Router ) {
     this.token$ = store.select('token');
   }
 
@@ -29,6 +30,7 @@ export class NewPostComponent implements OnInit {
       (posts) => {
         this.hasError = false;
         console.log(token);
+        this.router.navigate(['']);
       },
       error => {this.hasError = true; this.errors.push(JSON.stringify(error));}
     );
