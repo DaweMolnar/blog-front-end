@@ -23,3 +23,12 @@ export interface Comment {
   down_votes: number;
   post: number;
 }
+
+export interface User {
+  username: string;
+  password: string;
+}
+
+export interface Token {
+  token: string;
+}

@@ -11,6 +11,7 @@ import { PostFullComponent } from './post-full/post-full.component';
 import { CommentComponent } from './comment/comment.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
