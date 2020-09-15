@@ -4,6 +4,7 @@
   <p> {{post.content}}</p>
   <p class="blog-post-meta">
     Labels:
-    <span *ngFor="let label of post.labels"> {{getLabelName(label)}} </span>
+
+    <span *ngFor="let label of post.labels"> {{label}} </span>
   </p>
 </div><!-- /.blog-post -->

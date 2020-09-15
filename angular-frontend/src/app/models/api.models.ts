@@ -9,6 +9,13 @@ export interface Post {
   labels: number[];
 }
 
+export interface PostAdd {
+  title: string;
+  content: string;
+  author: number;
+  labels: number[];
+}
+
 export interface Label {
   id: number;
   name: string;

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Label, Post, Token, User} from "./models/api.models";
+import {Label, Post, PostAdd, Token, User} from "./models/api.models";
 import {map} from "rxjs/operators";
 
 @Injectable({
@@ -24,6 +24,10 @@ export class BlogApiService {
 
   loadLabels(): Observable<Label[]> {
     return this.http.get<Label[]>(this.api_url + '/api/label/?format=json');
+  }
+
+  addPost(post : PostAdd, token : Token) {
+    return this.http.post<PostAdd[]>(this.api_url + '/api/post/?format=json', post);
   }
 
   login(user: User): Observable<Token> {
