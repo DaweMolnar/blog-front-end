@@ -18,5 +18,4 @@ export class PostsComponent implements OnInit {
     this.labels$ = this.apiService.loadLabels();
     this.posts$ = this.apiService.loadPosts();
   }
-
 }

@@ -2,4 +2,8 @@
   <h2 class="blog-post-title">{{post.title}}</h2>
   <p class="blog-post-meta">{{post.creation_date | date:'longDate'}} by <a href="#">{{post.author}}</a></p>
   <p> {{post.content}}</p>
-  </div><!-- /.blog-post -->
+  <p class="blog-post-meta">
+    Labels:
+    <span *ngFor="let label of post.labels"> {{getLabelName(label)}} </span>
+  </p>
+</div><!-- /.blog-post -->

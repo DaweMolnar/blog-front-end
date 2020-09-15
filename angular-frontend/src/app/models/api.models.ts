@@ -2,7 +2,7 @@ export interface Post {
   id: number;
   title: string;
   content: string;
-  creation_date: string;
+  creation_date: Date;
   up_votes: string;
   down_votes: number;
   author: number;
